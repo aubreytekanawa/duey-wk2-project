@@ -11,9 +11,11 @@ const brick = { purchased: false }
 // const container = document.querySelector('.container')
 // const btns = document.createElement("button")
 
-let board = []
+let wall = createBoard()
+console.log(wall)
 
 function createBoard() {
+  let board = []
   for(let i = 0; i < rows; i++) {
       board[i] = []
       for(let j = 0; j < cols; j++){
@@ -23,10 +25,5 @@ function createBoard() {
   
   return board;
 }
-console.log(board)
 
-createBoard()
-
-
-
-module.exports = board
+module.exports = wall
