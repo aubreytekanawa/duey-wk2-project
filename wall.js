@@ -1,17 +1,18 @@
-const cellSize = 100;
-const width = 800;
-const height = 800;
-
-const rows = height / cellSize
-const cols = width / cellSize
+const rows = 4
+const cols = 4
 
 const brick = { purchased: false }
 
-//console.log('rows', rows, 'cells', cells)
-// const container = document.querySelector('.container')
-// const btns = document.createElement("button")
 
-let wall = createBoard()
+let wall = {bricks: createBoard()}
+
+
+wall.bricks[0][0].purchased = true
+wall.bricks[1][2].purchased = true
+
+
+console.log(wall.bricks[0][0])
+
 console.log(wall)
 
 function createBoard() {
@@ -19,7 +20,7 @@ function createBoard() {
   for(let i = 0; i < rows; i++) {
       board[i] = []
       for(let j = 0; j < cols; j++){
-          board[i][j] = brick
+          board[i][j] = Object.create(brick)
       }
   }
   
