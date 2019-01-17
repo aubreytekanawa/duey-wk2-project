@@ -13,6 +13,10 @@ router.get('/payment', (req, res) => {
   res.render('payment')
 })
 
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.redirect('/payment')
+})
 
 
 module.exports = router
