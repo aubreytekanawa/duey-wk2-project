@@ -1,4 +1,4 @@
-const wall = require('./wall')
+const wall = require('../wall')
 
 const express = require('express')
 const router = express.Router()
@@ -13,6 +13,6 @@ router.get('/payment', (req, res) => {
   res.render('payment', payment)
 })
 
-module.exports = {
-  router
-}
+
+
+module.exports = router
