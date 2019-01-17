@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
   res.render('wall', wall)
 })
 
+router.get('/payment', (req, res) => {
+  res.render('payment', payment)
+})
+
 module.exports = {
   router
 }
