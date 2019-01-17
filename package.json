@@ -7,15 +7,17 @@
   "scripts": {
     "dev": "nodemon index",
     "test": "jest --watchAll",
-    "start": "node index"
+    "start": "node index.js"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.12"
   },
   "devDependencies": {
     "jest": "^23.6.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.1"
   }
 }
