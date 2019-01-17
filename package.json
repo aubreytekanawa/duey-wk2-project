@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon index",
     "test": "jest --watchAll",
-    "start": "node index"
+    "start": "node index.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
