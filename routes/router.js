@@ -9,20 +9,31 @@ router.get('/', (req, res) => {
   res.render('wall', wall)
 })
 
-router.get('/payment', (req, res) => {
-  res.render('payment')
+router.get('/payment/:id', (req, res) => {
+
+  let id = req.params.id
+  let brick = getBrickById(id)
+  console.log(brick)
+  res.render('payment', brick)
 })
 
 router.post('/', (req, res) => {
   console.log(Object.keys(req.body)[0])
   let id = Object.keys(req.body)[0]
-  let brick = getBrickById(id)
-  res.redirect('/payment')
+//console.log(typeof id)
+  res.redirect('/payment/' + id)
 })
 
 function getBrickById(id){
-  //find the brick using id
+  for(let i = 0; i < wall.bricks.length; i++) {
+    for(let j=0; j < wall.bricks[0].length; j++) {
+      if(wall.bricks[i][j].id === Number(id)) {
+        return wall.bricks[i][j] 
+      }
+    }
+  }
 }
+
 
 
 module.exports = router
