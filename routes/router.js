@@ -13,6 +13,17 @@ router.get('/payment', (req, res) => {
   res.render('payment')
 })
 
+router.post('/', (req, res) => {
+  console.log(Object.keys(req.body)[0])
+  let id = Object.keys(req.body)[0]
+  let brick = getBrickById(id)
+  res.redirect('/payment')
+})
+
+function getBrickById(id){
+  //find the brick using id
+}
 
 
 module.exports = router
+
