@@ -19,6 +19,7 @@ function createBoard() {
       for(let j = 0; j < cols; j++){
           board[i][j] = Object.create(brick)
           board[i][j].id = idCounter
+          board[i][j].price = '$5'
           idCounter++
       }
   }
