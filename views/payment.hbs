@@ -5,28 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Payment</title>
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-<!-- personal information -->
+  <div class="container">
+    <!-- personal information -->
 <h1>Koha Page</h1>
 <h2>Total Koha / Gift {{price}} </h2>
   <form class="form" action="/payment/{{id}}" method="post">
-    <input type = "text" placeholder="Name" Name="name"> <br>
+    <input class='x' type = "text" placeholder="Name" Name="name"> <br>
     <input type = "text" placeholder="Organisation" Name="Organisation"> <br>
     <input type = "text" placeholder="Email" Name="Email"><br>
     <input type = "text" placeholder="Comments" Name="Comments"><br>
 <!-- var = PRICE Need to receive the brick or bricks and the price on the MVP or telly on the stretch-->
-
-<!--Credit card details Form format altered slightly using separate forms-->
+<div class="payment__details">
+  <!--Credit card details Form format altered slightly using separate forms-->
 <h1>Payment Details </h1>
 <input type = "text" placeholder="Name on Credit Card"><br>
-<input type = "value" placeholder="Credit Card Number"><br>
-<input type = "value" placeholder="CSV"><br>
-<input type = "text" placeholder="Expiry Date"><br>
+<input type = "number" placeholder="Credit Card Number"><br>
+<input type = "number" placeholder="CSV"><br>
+<input type = "number" placeholder="Expiry Date"><br>
 <button>Koha / Gift</button> <br>
 <!-- The button must cause severl functions to run
   1. block off the purchased bricks updating the wall array
   2. STRETCH Provide a comment to say thank you for your koha, nga mihi nui!! -->
 </form>
+</div>
+
+
+  </div>
+
 </body>
 </html>

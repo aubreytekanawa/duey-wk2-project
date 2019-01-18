@@ -35,7 +35,6 @@ function getBrickById(id){
   for(let i = 0; i < wall.bricks.length; i++) {
     for(let j=0; j < wall.bricks[0].length; j++) {
       if(wall.bricks[i][j].id === Number(id)) {
-
         return wall.bricks[i][j] 
       }
     }

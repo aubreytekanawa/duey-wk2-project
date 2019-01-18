@@ -12,7 +12,8 @@
     {{#each bricks }}
       {{#each this}}
         <input type="submit" name={{id}} value="Brick"
-        {{#if purchased }} style="color: blue" 
+        {{#if purchased }} style="color: blue" disabled
+        
         {{else }}
         {{/if}}
         />
