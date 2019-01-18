@@ -10,7 +10,13 @@ body {
 }
 .container {
   text-align: center;
+  padding-bottom: 60px;
 
+}
+
+.main__title {
+  text-align: center;
+  font-size: 15rem;
 }
 
 input {
@@ -26,6 +32,27 @@ input {
   background: white;
   border-radius: 4px;
   padding: 5px;
+}
+
+.wallBtns {
+  margin: 4px;
+  display: inline-block;
+  height: 5rem;
+  width: 10%;
+  border: 1px solid rgb(228, 228, 228);
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  background: #2ecc71;
+  border-radius: 4px;
+  padding: 5px;
+  color: white;
+  font-size: 2em;
+}
+
+.brickform {
+  padding-top: 4em;
 }
 
 h1 {

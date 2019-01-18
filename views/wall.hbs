@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wall</title>
+    <link rel="stylesheet" href="../style/style.css">
+
 </head>
 <body>
+  <h1 class="main__title">Koha Wall</h1>
   <div class="container">
-    <form class="form" action="/" method="post">
+    <form class="brickform" action="/" method="post">
     {{#each bricks }}
       {{#each this}}
-        <input type="submit" name={{id}} value="Brick"
-        {{#if purchased }} style="color: blue" disabled
+        <input class="wallBtns" type="submit" name={{id}} 
+        {{#if purchased }} style="background-color: rgb(252, 81, 81); color: rgb(255, 255, 255)" disabled value="sold"
         
-        {{else }}
+        {{else }} value="buy"
         {{/if}}
         />
       {{/each }}<br>
