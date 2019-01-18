@@ -11,7 +11,11 @@
     <form class="form" action="/" method="post">
     {{#each bricks }}
       {{#each this}}
-        <input type="submit" name={{id}} value="Brick"/>
+        <input type="submit" name={{id}} value="Brick"
+        {{#if purchased }} style="color: blue" 
+        {{else }}
+        {{/if}}
+        />
       {{/each }}<br>
     {{/each }}
     </form>
